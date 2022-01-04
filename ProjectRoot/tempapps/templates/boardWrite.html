@@ -1,0 +1,69 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    	<!-- Contents영역 -->
+    	<div class="col-9 pt-3">
+        	<h3>게시판 작성 - <small>자유게시판</small></h3>
+       	 
+        	<form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+            	<table class="table table-bordered">
+            	<colgroup>
+                	<col width="20%"/>
+                	<col width="*"/>
+            	</colgroup>
+            	<tbody>
+                	<tr>
+                    	<th class="text-center"
+                        	style="vertical-align:middle;">작성자</th>
+                    	<td>
+                        	<input type="text" class="form-control"
+                            	style="width:100px;" 
+                                name="user_name" required id="id_user_name"/>
+                    	</td>
+                	</tr>
+                	<tr>
+                    	<th class="text-center"
+                        	style="vertical-align:middle;">패스워드</th>
+                    	<td>
+                        	<input type="text" class="form-control"
+                            	style="width:200px;" 
+                                name="password" required id="id_password"/>
+                    	</td>
+                	</tr>
+                	<tr>
+                    	<th class="text-center"
+                        	style="vertical-align:middle;">제목</th>
+                    	<td>
+                        	<input type="text" class="form-control"
+                            name="title" required id="id_title" />
+                    	</td>
+                	</tr>
+                	<tr>
+                    	<th class="text-center"
+                        	style="vertical-align:middle;">내용</th>
+                    	<td>
+                        	<textarea name="content" required id="id_content" rows="5" class="form-control"></textarea>
+                    	</td>
+                	</tr>
+                	<tr>
+                    	<th class="text-center"
+                        	style="vertical-align:middle;">첨부파일</th>
+                    	<td>
+                        	<input type="file" class="form-control" />
+                    	</td>
+                	</tr>
+            	</tbody>
+            	</table>
+
+            	<!-- 각종버튼 -->
+            	<div class="row mb-3">
+                	<div class="col d-flex justify-content-end">
+                    	<button type="submit" class="btn btn-primary">글쓰기</button>
+                    	<button type="reset" class="btn btn-dark">다시쓰기</button>
+                	</div>
+            	</div>
+        	</form>
+    	</div>
+	</div>
+{% endblock %}

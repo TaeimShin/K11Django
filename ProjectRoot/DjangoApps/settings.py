@@ -126,8 +126,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
-STATIC_URL = 'static/'
+'''
+장고 프레임워크에서는 CSS, JS, 이미지와 같은 정적 파일들은 static폴더에
+저장하도록 규정되어있다. 개발자가 임의로 images와 같은 폴더를 생성하더라도
+접근할 수 없다. 
+'''
+STATIC_URL = 'static/' 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
