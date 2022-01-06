@@ -21,7 +21,7 @@
     </script>
     <h1>수정하기</h1>
     <form method="post" enctype="multipart/form-data" onsubmit="return chk(this);" >
-    <input type="hidden" >
+    <input type="hidden" name="prevphoto" value="{{post.mainphoto}}">
         {% csrf_token %}
         제목 :  <input type="text" name="titles" value="{{ post.titles }}"><br>
         내용 :  <textarea name="contents" id="" cols="30" rows="10">{{post.contents}}</textarea><br>
